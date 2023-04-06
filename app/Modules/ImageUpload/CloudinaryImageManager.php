@@ -18,7 +18,7 @@ class CloudinaryImageManager implements ImageManagerInterface{
      public function save($file):string{
         return $this->cloudinary
             ->uploadApi()
-            ->upload(is_string($file) ? $file : $file->getReaclPath())['public_id'];
+            ->upload(is_string($file) ? $file : $file->getRealPath())['public_id'];
      }
 
      /**
